@@ -6,7 +6,7 @@ public class Main {
         Thread thread1 = new ExampleThread1();
         Thread thread2 = new ExampleThread1();
         thread.start();
-        thread1.start();
+        thread.join();
         System.out.println(thread.getState());
         Thread[] arrThread = {thread, thread1, thread2};
         ThreadProcessor.findAndStartThread(arrThread);
